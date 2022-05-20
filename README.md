@@ -46,24 +46,24 @@ The following list resumes the observations made during the creation of the mini
   // input:
   float w = 0.6104355605587131;
   // output:
-    w = 0.61043554544448852539
-  w/w = 0.99999994039535522461
+        w = 0.61043554544448852539
+      w/w = 0.99999994039535522461
   ```
 
   ```
   // input:
   float w = 0.61043556;
   // output:
-    w = 0.61043554544448852539
-  w/w = 0.99999994039535522461
+        w = 0.61043554544448852539
+      w/w = 0.99999994039535522461
   ```
 
   ```
   // input:
   float w = 0.6104355;
   // output:
-    w = 0.61043548583984375000
-  w/w = 1.00000000000000000000
+        w = 0.61043548583984375000
+      w/w = 1.00000000000000000000
   ```
 
   However, neglecting the limitation in precision of floats, the result for `w/w` should always stay the same.
