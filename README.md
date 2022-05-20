@@ -27,7 +27,7 @@ Since both operands are the same float (`w`), the result is expected to yield `1
 nvc++ -stdpar=gpu -O3 -o main main.cpp && ./main
 ```
 
-Expected output:
+Resulting output:
 ```
   w = 0.61043554544448852539
 w/w = 0.99999994039535522461
