@@ -66,5 +66,13 @@ The following list resumes the observations made during the creation of the mini
       w/w = 1.00000000000000000000
   ```
 
+  ```
+  // input:
+  float w = 0.132795936204339;
+  // output:
+        w = 0.13279592990875244141
+      w/w = 1.00000000000000000000
+  ```
+
   However, neglecting the limitation in precision of floats, the result for `w/w` should always stay the same.
    
