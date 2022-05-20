@@ -12,7 +12,7 @@ The issue has been debugged so far in an environment using the following modules
 * nvhpc/22.3 (using CUDA 11.6)
 
 ## Information about the setup
-The code has been tested on a Nvidia A6000 and a GeForce RTX 2080.
+The code has been tested on an Nvidia A6000 and a GeForce RTX 2080.
 
 This project contains the minimal required modules and code to recreate the issue encountered.
 
@@ -20,7 +20,7 @@ This project contains the minimal required modules and code to recreate the issu
 The code consist of two independent `std::for_each_n` loops. 
 The first loop uses a `std::exection` policy, but does itself no relevant computation.
 The second loop performs a single precision floating point division.
-Since both operands are the same float (`w`), the result is exepcted to yield `1.0` but it differs slightly.
+Since both operands are the same float (`w`), the result is expected to yield `1.0` but it differs slightly.
 
 ## Execute the code
 ```
@@ -38,5 +38,5 @@ The following list resumes the observations made during the creation of the mini
 * The issue persists when using compiling for multicore (i.e. `-stdpar=multicore`) and when using the `-nostdpar` flag.
 * Using another optimization level (`-O2`,`-O1`,`-O3 -g`) produce correct outputs.
 * Removing the execution policy from the first loop resolves the issue.
-* The result is wrong for all execution policies for the first loop.
+* The result is wrong, indifferent of the execution policies used for the first loop.
 * Using `double` for `w` solves the issue.
