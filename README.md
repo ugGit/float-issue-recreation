@@ -40,3 +40,30 @@ The following list resumes the observations made during the creation of the mini
 * Removing the execution policy from the first loop resolves the issue.
 * The result is wrong, indifferent of the execution policies used for the first loop.
 * Using `double` for `w` solves the issue.
+* Using different values for `w` suggest a problem with the handling of floating point numbers:
+  ```
+  // input:
+  float w = 0.6104355605587131;
+  // output:
+    w = 0.61043554544448852539
+  w/w = 0.99999994039535522461
+  ```
+
+  ```
+  // input:
+  float w = 0.61043556;
+  // output:
+    w = 0.61043554544448852539
+  w/w = 0.99999994039535522461
+  ```
+
+  ```
+  // input:
+  float w = 0.6104355;
+  // output:
+    w = 0.61043548583984375000
+  w/w = 1.00000000000000000000
+  ```
+
+  However, neglecting the limitation in precision of floats, the result for `w/w` should always stay the same.
+   
