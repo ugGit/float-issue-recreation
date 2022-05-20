@@ -39,6 +39,7 @@ The following list resumes the observations made during the creation of the mini
 * Using another optimization level (`-O2`,`-O1`,`-O3 -g`) produce correct outputs.
 * Removing the execution policy from the first loop resolves the issue.
 * The result is wrong, indifferent of the execution policies used for the first loop.
+* The problem comes not from using `printf()`. Using the result of the divisions in further calculations showed that `w/w != 1.0`.
 * Using `double` for `w` solves the issue.
 * Using different values for `w` suggest a problem with the handling of floating point numbers:
   ```
