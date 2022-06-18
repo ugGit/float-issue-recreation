@@ -1,4 +1,4 @@
-# Floating Point Division with nvcp++: w/w != 1.0
+# Floating Point Division with nvc++: w/w != 1.0
 Clone the repo:
 
 ```
